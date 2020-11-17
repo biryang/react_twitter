@@ -1,5 +1,6 @@
 //Firebase SDK
 import firebase from "firebase/app"
+import "firebase/auth"
 //Firebase Config 값
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_APIKEY,
@@ -12,4 +13,6 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_MEASUREMENTID,
 };
 //Firebase 초기화
-export default firebase.initializeApp(firebaseConfig);
+
+firebase.initializeApp(firebaseConfig);
+export const authService = firebase.auth()
