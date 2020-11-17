@@ -13,6 +13,5 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_MEASUREMENTID,
 };
 //Firebase 초기화
-
 firebase.initializeApp(firebaseConfig);
 export const authService = firebase.auth()
